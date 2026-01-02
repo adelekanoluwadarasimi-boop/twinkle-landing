@@ -210,7 +210,9 @@ body {
 
     .mobile-menu-btn {
         display: block;
-        z-index: 101;
+        position: relative;
+        z-index: 2000;
+        color: var(--color-text-main);
     }
 
     .main-nav {
@@ -221,12 +223,13 @@ body {
         /* Full width or partial? checking design, usually full or sidebar */
         max-width: 300px;
         height: 100vh;
-        background: white;
+        background-color: #ffffff;
         padding: 80px 24px 24px;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
         display: flex;
         flex-direction: column;
+        z-index: 1000;
     }
 
     .main-nav.active {
@@ -278,11 +281,7 @@ body {
         width: 100%;
     }
 
-    .hero-cta .btn-outline {
-        background-color: var(--color-primary-btn);
-        color: #ffffff;
-        border-color: var(--color-primary-btn);
-    }
+
 
     .trusted-by {
         flex-wrap: wrap;

@@ -215,6 +215,26 @@ body {
         color: var(--color-text-main);
     }
 
+    /* Hamburger Animation */
+    .mobile-menu-btn .line-top,
+    .mobile-menu-btn .line-middle,
+    .mobile-menu-btn .line-bottom {
+        transform-origin: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-menu-btn.is-open .line-top {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.is-open .line-middle {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.is-open .line-bottom {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
     .main-nav {
         position: fixed;
         top: 0;
@@ -244,6 +264,16 @@ body {
 
     .main-nav a {
         font-size: 18px;
+    }
+
+    /* Fix button colors in mobile nav */
+    .main-nav a.btn {
+        color: var(--color-text-main);
+        /* Default for outline/generic */
+    }
+
+    .main-nav a.btn-primary {
+        color: var(--color-primary-btn-text) !important;
     }
 
     .desktop-only {

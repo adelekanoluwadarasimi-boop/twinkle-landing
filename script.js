@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileBtn && nav) {
         mobileBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
+            mobileBtn.classList.toggle('is-open');
         });
     }
 });
